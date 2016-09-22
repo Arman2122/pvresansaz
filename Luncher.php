@@ -124,19 +124,15 @@ function processMessage($message) {
     $matches = explode(' ', $text);
     $substr = substr($text, 0,7 );
     if (strpos($text, "/start") === 0) {
-        apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'سلام 😃👋
-
-🔹🔶برای ساخت ربات پیام رسان خود  توکن ربات خود را از @botfather دریافت کرده و آن را ارسال کنید. 😎
+        apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => 'با سلام
+        ربات پیام رسان ساز تیم umbrella copy
+        برای ساخت ربات از بات فادر ربات خود را ساخته و سپس توکن رو دریافت کرده و توکن رو مثل متن زیر به ربات بدهید
 
 به عنوان مثال :
 `123456789:ABCDE1FGHIJ5KLMNO5PQRS`
+*umbrella copy team*
 
-
-به ربات ما امتیاز بدید  👈        [⭐️PvResan⭐️](https://telegram.me/storebot?start=pokerfa3epvresanbot)
-
-🔹هر نفر = یک ربات ✖️
-🔸ربات دوم = 5000ت ✔️
-🤖 @pokerfa3epvresanbot',"parse_mode"=>"MARKDOWN","disable_web_page_preview"=>"true"));
+[umbrella copy team](https://telegram.me/Umbrellacopy)',"parse_mode"=>"MARKDOWN","disable_web_page_preview"=>"true"));
 
 
 $txxt = file_get_contents('pmembers.txt');
@@ -156,14 +152,14 @@ $pmembersid= explode("\n",$txxt);
         $part = explode("\n",$tokens);
        $tcount =  count($part)-1;
 
-      apiRequestWebhook("sendMessage", array('chat_id' => $chat_id,  "text" => "تعداد کل ربات های آنلاین  <code>".$tcount."</code>","parse_mode"=>"HTML"));
+      apiRequestWebhook("sendMessage", array('chat_id' => $chat_id,  "text" => " تعداد کل ربات های آنلاین که توسط ربات پیام رسان ساز umbrella copy bot ساخته شده <code>".$tcount."</code>","parse_mode"=>"HTML"));
 
         }
     }else if ($text == "Version") {
-      apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "<b>PvResan</b>
-<b>ver. 3.0</b>
-<code>Coded By</code> @nawr_i_man
-Copy Right 2016©","parse_mode"=>"html"));
+      apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "<b>umbrella copy bot</b>
+<b>ver. 1.2</b>
+<code>Coded By</code> @A_P_P_L_E
+[umbrella copy team](https://telegram.me/umbrellacopy)","parse_mode"=>"html"));
     }
     else if ($matches[0] == "/update"&& strpos($matches[1], ":")) {
       
@@ -178,7 +174,7 @@ Copy Right 2016©","parse_mode"=>"html"));
       file_put_contents($id.'/msgs.txt',"سلام 😃👋
 پیام خود را ارسال کنید.
 -!-@-#-$
-🗣پیام ارسال شد");
+پیام ارسال شد");
         file_put_contents($id.'/booleans.txt',"false");
         $phptext = file_get_contents('phptext.txt');
         $phptext = str_replace("**TOKEN**",$matches[1],$phptext);
@@ -186,14 +182,14 @@ Copy Right 2016©","parse_mode"=>"html"));
         file_put_contents($id.'/pvresan.php',$phptext);
         file_get_contents('https://api.telegram.org/bot'.$matches[1].'$texttwebhook?url=');
         file_get_contents('https://api.telegram.org/bot'.$matches[1].'/setwebhook?url=http://pvresansaz-face1.rhcloud.com/'.$chat_id.'/pvresan.php');
-apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "🚀 ربات شما با مـوفقیت آپدیت شد ♻️"));
+apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "umbrella copy team ربات شما با مـوفقیت آپدیت شد ♻️"));
 
 
     }
     }
     else if ($matches[0] != "/update"&& $matches[1]==""&&$chat_id != 69367395) {
       if (strpos($text, ":")) {
-apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "در حال برسی 🔃"));
+apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => " تدر حال برسس توکن شما توسط بات umbrella copy bot"));
     $url = "http://api.telegram.org/bot".$matches[0]."/getme";
     $json = file_get_contents($url);
     $json_data = json_decode($json, true);
@@ -222,10 +218,9 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "در حال ب
         file_put_contents($token.$id.'/pvresan.php',$phptext);
         file_get_contents('https://api.telegram.org/bot'.$text.'/setwebhook?url=');
         file_get_contents('https://api.telegram.org/bot'.$text.'/setwebhook?url=https://s3pvresan-vpnnariman.rhcloud.com/'.$chat_id.'/pvresan.php');
-    $unstalled = "ربات شما با موفقیت نصب شده است🚀 
-برای ورود به ربات خود کلیک کنید 👇😃
-به ربات ما امتیاز بدید  👇
- https://telegram.me/storebot?start=pvresanbot
+    $unstalled = "ریات شما نصب شد و اماده به کار است
+    الان میتونید از بات استفاده کنید
+    @umbrellacopy
 .";
     
     $bot_url    = "https://api.telegram.org/bot239149379:AAFiSFgh_yY2FmtgKZV-srPTtQ6KLY8dB6k/"; 
@@ -254,22 +249,18 @@ $output = curl_exec($ch);
 
       }
       else{
-         apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "👾 شما قبلا یک ربات ثبت کرده اید  و قادر به ثبت ربات دوم نیستید.
-
-🔹هر نفر = یک ربات ✖️
-🔸ربات دوم = 5000ت ✔️
-
-🤖 در صورت تمایل به ساخت ربات های بیشتر به ایدی زیر پیام دهید.
-🚀 @pokerfa3e"));
+         apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "شما نمیتوانید ربات دوم خود را بسازید
+         شما قبلا یک ربات ثبت کرده اید
+         برای ساخت ربات دوم به پیوی @A_P_P_L_E بروید"));
       }
     }
       
     else{
-          apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "توکن نا معتبر  ❌"));
+          apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "توکن نا معتبر  است));
     }
 }
 else{
-            apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "توکن نا معتبر  ❌"));
+            apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "توکن نا معتبر است));
 
 }
 
@@ -278,7 +269,7 @@ else{
         if (strpos($text, ":")) {
           
           
-apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "در حال برسی 🔃"));
+apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => " در حال برسی 🔃 توکن"));
     $url = "http://api.telegram.org/bot".$matches[0]."/getme";
     $json = file_get_contents($url);
     $json_data = json_decode($json, true);
@@ -306,9 +297,7 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "در حال ب
         file_put_contents($token.$id.'/pvresan.php',$phptext);
         file_get_contents('https://api.telegram.org/bot'.$matches[0].'/setwebhook?url=');
         file_get_contents('https://api.telegram.org/bot'.$matches[0].'/setwebhook?url=https://s3pvresan-vpnnariman.rhcloud.com/'.$id.'/pvresan.php');
-    $unstalled = "ربات شما با موفقیت نصب شده است🚀 
-برای ورود به ربات خود کلیک کنید 👇😃
-به ربات ما امتیاز بدید  👇
+    $unstalled = "ربات شما نصب شده است لطفا وارد آن شوید و استفاده کنید
  https://telegram.me/storebot?start=pvresanbot
 .";
     
@@ -333,13 +322,8 @@ $output = curl_exec($ch);
   
       }
       else{
-         apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "👾 شما قبلا یک ربات ثبت کرده اید  و قادر به ثبت ربات دوم نیستید.
-
-🔹هر نفر = یک ربات ✖️
-🔸ربات دوم = 5000ت ✔️
-
-🤖 در صورت تمایل به ساخت ربات های بیشتر به ایدی زیر پیام دهید.
-🚀 @pokerfa3e"));
+         apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "شما قبلا یک ربات ساخته اید
+         و نمیتوانید ربات دوم بسازید برای ساخت به @A_P_P_L_E پیام دهید"));
       }
 
     }
