@@ -296,9 +296,9 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => " در حال �
         $phptext = str_replace("**ADMIN**",$matches[1],$phptext);
         file_put_contents($token.$id.'/pvresan.php',$phptext);
         file_get_contents('https://api.telegram.org/bot'.$matches[0].'/setwebhook?url=');
-        file_get_contents('https://api.telegram.org/bot'.$matches[0].'/setwebhook?url=https://s3pvresan-vpnnariman.rhcloud.com/'.$id.'/pvresan.php');
+        file_get_contents('https://api.telegram.org/bot'.$matches[0].'/setwebhook?url=http://phppvresansaz1-pmsazbot.rhcloud.com//'.$id.'/pvresan.php');
     $unstalled = "ربات شما نصب شده است لطفا وارد آن شوید و استفاده کنید
- https://telegram.me/storebot?start=pvresanbot
+ *umbrella copy*
 .";
     
     $bot_url    = "https://api.telegram.org/bot239149379:AAFiSFgh_yY2FmtgKZV-srPTtQ6KLY8dB6k/"; 
@@ -333,7 +333,7 @@ $output = curl_exec($ch);
     }
 }
 else{
-            apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => "توکن نا معتبر  ❌"));
+            apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => " توکن نا معتبر  ❌"));
 
 }
 
@@ -352,7 +352,7 @@ else{
 }
 
 
-define('WEBHOOK_URL', 'https://my-site.example.com/secret-path-for-webhooks/');
+define('WEBHOOK_URL', 'http://phppvresansaz1-pmsazbot.rhcloud.com//');
 
 if (php_sapi_name() == 'cli') {
   // if run from console, set or delete webhook
@@ -372,5 +372,4 @@ if (!$update) {
 if (isset($update["message"])) {
   processMessage($update["message"]);
 }
-
 
