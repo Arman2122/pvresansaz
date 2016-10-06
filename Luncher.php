@@ -1,6 +1,6 @@
 <?php
 
-define('BOT_TOKEN', '275233977:AAEYqYuqJTSRzMAZ11AoxQptzYt04JL8o5M');
+define('BOT_TOKEN', '11111111:AAEYqYuqJTSRzMAZ11AoxQptzYt04JL8o5M');
 define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN.'/');
 
 function apiRequestWebhook($method, $parameters) {
@@ -301,7 +301,7 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => " در حال �
  *umbrella copy*
 .";
     
-    $bot_url    = "https://api.telegram.org/bot275233977:AAEYqYuqJTSRzMAZ11AoxQptzYt04JL8o5M/"; 
+    $bot_url    = "https://api.telegram.org/bot11111111:AAEYqYuqJTSRzMAZ11AoxQptzYt04JL8o5M/"; 
     $url        = $bot_url . "sendMessage?chat_id=" . $chat_id ; 
 
 $post_fields = array('chat_id'   => $chat_id, 
